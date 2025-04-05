@@ -17,8 +17,8 @@ const FooterSection = () => {
                     <div className="newsletter-title">
                       <h2>Subscribe Our Newsletter</h2>
                       <p>
-                        Duis pulvinar metus elit, ut aliquam est sollicitudin
-                        finibus.
+                        Be the first get all updates and offers from us.
+                        Subscribe
                       </p>
                     </div>
                     {/* <!-- Section Title End --> */}
@@ -70,10 +70,7 @@ const FooterSection = () => {
 
                 {/* <!-- Footer About Content Start --> */}
                 <div className="footer-about-content">
-                  <p>
-                    Duis pulvinar metus elit, ut aliquam est sollicitudin
-                    finibus. Integer lobortis est interdum.
-                  </p>
+                  <p>Place to be</p>
                 </div>
                 {/* <!-- Footer About Content End --> */}
 
@@ -119,7 +116,7 @@ const FooterSection = () => {
                       <img src="images/icon-location.svg" alt="" />
                     </div>
 
-                    <p>123, Lorem Ipsum, Street no, Cityname, Country 123456</p>
+                    <p>123, Town, Street no, Cityname, Country 123456</p>
                   </div>
 
                   <div className="footer-info-box">

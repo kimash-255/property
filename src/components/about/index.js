@@ -3,101 +3,193 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div class="about-us">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            {/* <!-- About Left Image Start --> */}
-            <div class="about-images">
-              <div class="about-video">
-                <figure class="reveal image-anime">
-                  <img src="images/video-img-2.jpg" alt="" />
+    <div className="about-us">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-6">
+            {/* About Left Image Start */}
+            <div className="about-images">
+              <div className="about-video">
+                <figure
+                  className="reveal image-anime"
+                  style={{
+                    transform: "translate(0px, 0px)",
+                    opacity: 1,
+                    visibility: "inherit",
+                  }}
+                >
+                  <img
+                    src="/images/video-img-2.jpg"
+                    alt=""
+                    style={{ transform: "translate(0px, 0px)" }}
+                  />
                 </figure>
 
-                <div class="video-play-button">
+                <div className="video-play-button">
                   <Link
                     href="https://www.youtube.com/watch?v=2JNMGesMC2Y"
-                    class="popup-video"
+                    className="popup-video"
                   >
-                    <img src="images/icon-play.svg" alt="" />
+                    <img src="/images/icon-play.svg" alt="" />
                   </Link>
                 </div>
               </div>
 
-              <div class="about-image">
-                <figure class="reveal image-anime">
-                  <img src="images/video-img-1.jpg" alt="" />
+              <div className="about-image">
+                <figure
+                  className="reveal image-anime"
+                  style={{
+                    transform: "translate(0px, 0px)",
+                    opacity: 1,
+                    visibility: "inherit",
+                  }}
+                >
+                  <img
+                    src="/images/video-img-1.jpg"
+                    alt=""
+                    style={{ transform: "translate(0px, 0px)" }}
+                  />
                 </figure>
               </div>
             </div>
-            {/* <!-- About Left Image End --> */}
+            {/* About Left Image End */}
           </div>
-          <div class="col-lg-6">
-            {/* <!-- About Content Start --> */}
-            <div class="about-content">
-              {/* <!-- Section Title Start --> */}
-              <div class="section-title">
-                <h3 class="wow fadeInUp">About Jivux</h3>
-                <h2 class="text-anime">
-                  The Leading Real Estate About Marketplace.
+
+          <div className="col-lg-6">
+            {/* About Content Start */}
+            <div className="about-content">
+              {/* Section Title Start */}
+              <div className="section-title">
+                <h3
+                  className="wow fadeInUp"
+                  style={{
+                    visibility: "visible",
+                    animationName: "fadeInUp",
+                  }}
+                >
+                  About Jivux
+                </h3>
+
+                <h2 className="text-anime">
+                  {["The Leading Real", "Estate About", "Marketplace."].map(
+                    (line, i) => (
+                      <div
+                        key={i}
+                        className="line"
+                        style={{
+                          display: "block",
+                          textAlign: "left",
+                          width: "100%",
+                        }}
+                      >
+                        {line.split(" ").map((word, j) => (
+                          <div
+                            key={j}
+                            className="word"
+                            style={{ display: "inline-block" }}
+                          >
+                            {word.split("").map((char, k) => (
+                              <div
+                                key={k}
+                                className="char"
+                                style={{
+                                  display: "inline-block",
+                                  opacity: 1,
+                                  visibility: "inherit",
+                                  transform: "translate(0px, 0px)",
+                                }}
+                              >
+                                {char}
+                              </div>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    )
+                  )}
                 </h2>
               </div>
-              {/* <!-- Section Title End --> */}
+              {/* Section Title End */}
 
-              {/* <!-- About Content Body Start --> */}
-              <div class="about-content-body">
-                <p class="wow fadeInUp" data-wow-delay="0.5s">
-                  We are a passionate team dedicated to providing exceptional
-                  service, ensuring quality, trust, and a seamless experience
-                  for our clients. Our goal is to help you make the best choices
-                  with confidence.
+              {/* About Content Body Start */}
+              <div className="about-content-body">
+                <p
+                  className="wow fadeInUp"
+                  data-wow-delay="0.5s"
+                  style={{
+                    visibility: "visible",
+                    animationDelay: "0.5s",
+                    animationName: "fadeInUp",
+                  }}
+                >
+                  Duis pulvinar metus elit, ut aliquam est sollicitudin finibus.
+                  Integer lobortis est interdum. Suspendisse nunc est, varius
+                  quis fringilla ac, commodo a ante. Praesent non elit cursus,
+                  aliquam sapien quis, dictum tortor.
                 </p>
 
                 <ul>
-                  <li class="wow fadeInUp" data-wow-delay="0.75s">
-                    <div class="icon-box">
-                      <img src="images/icon-about-1.svg" alt="" />
-                    </div>
-                    <span>Smart Home Design</span>
-                  </li>
-
-                  <li class="wow fadeInUp" data-wow-delay="1s">
-                    <div class="icon-box">
-                      <img src="images/icon-about-2.svg" alt="" />
-                    </div>
-                    <span>Beautiful Scene Around</span>
-                  </li>
-
-                  <li class="wow fadeInUp" data-wow-delay="1.25s">
-                    <div class="icon-box">
-                      <img src="images/icon-about-3.svg" alt="" />
-                    </div>
-                    <span>Exceptional Lifestyle</span>
-                  </li>
-
-                  <li class="wow fadeInUp" data-wow-delay="1.5s">
-                    <div class="icon-box">
-                      <img src="images/icon-about-4.svg" alt="" />
-                    </div>
-                    <span>Complete 24/7 Security</span>
-                  </li>
+                  {[
+                    {
+                      icon: "icon-about-1.svg",
+                      label: "Smart Home Design",
+                      delay: "0.75s",
+                    },
+                    {
+                      icon: "icon-about-2.svg",
+                      label: "Beautiful Scene Around",
+                      delay: "1s",
+                    },
+                    {
+                      icon: "icon-about-3.svg",
+                      label: "Exceptional Lifestyle",
+                      delay: "1.25s",
+                    },
+                    {
+                      icon: "icon-about-4.svg",
+                      label: "Complete 24/7 Security",
+                      delay: "1.5s",
+                    },
+                  ].map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="wow fadeInUp"
+                      data-wow-delay={item.delay}
+                      style={{
+                        visibility: "visible",
+                        animationDelay: item.delay,
+                        animationName: "fadeInUp",
+                      }}
+                    >
+                      <div className="icon-box">
+                        <img src={`/images/${item.icon}`} alt="" />
+                      </div>
+                      <span>{item.label}</span>
+                    </li>
+                  ))}
                 </ul>
 
                 <Link
-                  href="#"
-                  class="btn-default wow fadeInUp"
+                  href="/about"
+                  className="btn-default wow fadeInUp"
                   data-wow-delay="1.75s"
+                  style={{
+                    visibility: "visible",
+                    animationDelay: "1.75s",
+                    animationName: "fadeInUp",
+                  }}
                 >
                   Read More
                 </Link>
               </div>
-              {/* <!-- About Content Body End --> */}
+              {/* About Content Body End */}
             </div>
-            {/* <!-- About Content End --> */}
+            {/* About Content End */}
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default About;
