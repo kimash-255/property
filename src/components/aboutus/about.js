@@ -69,7 +69,6 @@ const MainAbout = () => {
                 >
                   About Jivux
                 </h3>
-
                 <h2 className="text-anime">
                   <div
                     className="line"
@@ -80,54 +79,13 @@ const MainAbout = () => {
                     }}
                   >
                     <div className="word" style={{ display: "inline-block" }}>
-                      <div
-                        className="char"
-                        style={{
-                          display: "inline-block",
-                          opacity: 1,
-                          visibility: "inherit",
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        T
-                      </div>
-                      <div
-                        className="char"
-                        style={{
-                          display: "inline-block",
-                          opacity: 1,
-                          visibility: "inherit",
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        h
-                      </div>
-                      <div
-                        className="char"
-                        style={{
-                          display: "inline-block",
-                          opacity: 1,
-                          visibility: "inherit",
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        e
-                      </div>
+                      <span className="char">The</span>
                     </div>{" "}
                     <div className="word" style={{ display: "inline-block" }}>
-                      <div className="char">L</div>
-                      <div className="char">e</div>
-                      <div className="char">a</div>
-                      <div className="char">d</div>
-                      <div className="char">i</div>
-                      <div className="char">n</div>
-                      <div className="char">g</div>
+                      <span className="char">Leading</span>
                     </div>{" "}
                     <div className="word" style={{ display: "inline-block" }}>
-                      <div className="char">R</div>
-                      <div className="char">e</div>
-                      <div className="char">a</div>
-                      <div className="char">l</div>
+                      <span className="char">Real</span>
                     </div>
                   </div>
 
@@ -140,19 +98,10 @@ const MainAbout = () => {
                     }}
                   >
                     <div className="word" style={{ display: "inline-block" }}>
-                      <div className="char">E</div>
-                      <div className="char">s</div>
-                      <div className="char">t</div>
-                      <div className="char">a</div>
-                      <div className="char">t</div>
-                      <div className="char">e</div>
+                      <span className="char">Estate</span>
                     </div>{" "}
                     <div className="word" style={{ display: "inline-block" }}>
-                      <div className="char">A</div>
-                      <div className="char">b</div>
-                      <div className="char">o</div>
-                      <div className="char">u</div>
-                      <div className="char">t</div>
+                      <span className="char">About</span>
                     </div>
                   </div>
 
@@ -165,18 +114,7 @@ const MainAbout = () => {
                     }}
                   >
                     <div className="word" style={{ display: "inline-block" }}>
-                      <div className="char">M</div>
-                      <div className="char">a</div>
-                      <div className="char">r</div>
-                      <div className="char">k</div>
-                      <div className="char">e</div>
-                      <div className="char">t</div>
-                      <div className="char">p</div>
-                      <div className="char">l</div>
-                      <div className="char">a</div>
-                      <div className="char">c</div>
-                      <div className="char">e</div>
-                      <div className="char">.</div>
+                      <span className="char">Marketplace.</span>
                     </div>
                   </div>
                 </h2>

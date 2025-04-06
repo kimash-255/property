@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,11 +8,11 @@ const Gallery = () => {
     { id: 1, src: "/images/post-1.jpg", delay: "0.25s" },
     { id: 2, src: "/images/post-2.jpg", delay: "0.5s" },
     { id: 3, src: "/images/post-3.jpg", delay: "0.75s" },
-    { id: 4, src: "/images/post-4.jpg", delay: "1s" },
-    { id: 5, src: "/images/post-5.jpg", delay: "1.25s" },
-    { id: 6, src: "/images/post-6.jpg", delay: "1.5s" },
-    { id: 7, src: "/images/post-7.jpg", delay: "1.75s" },
-    { id: 8, src: "/images/post-8.jpg", delay: "2s" },
+    { id: 4, src: "/images/post-1.jpg", delay: "1s" },
+    { id: 5, src: "/images/post-2.jpg", delay: "1.25s" },
+    { id: 6, src: "/images/post-3.jpg", delay: "1.5s" },
+    { id: 7, src: "/images/post-1.jpg", delay: "1.75s" },
+    { id: 8, src: "/images/post-2.jpg", delay: "2s" },
   ];
 
   // About features data
@@ -152,161 +153,6 @@ const Gallery = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* About Section */}
-      <div className="about-us">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="about-images">
-                <div className="about-video">
-                  <figure
-                    className="reveal image-anime"
-                    style={{
-                      transform: "translate(0px, 0px)",
-                      opacity: 1,
-                      visibility: "inherit",
-                    }}
-                  >
-                    <Image
-                      src="/images/video-img-2.jpg"
-                      alt=""
-                      width={600}
-                      height={400}
-                      layout="responsive"
-                    />
-                  </figure>
-
-                  <div className="video-play-button">
-                    <Link
-                      href="https://www.youtube.com/watch?v=2JNMGesMC2Y"
-                      className="popup-video"
-                    >
-                      <Image
-                        src="/images/icon-play.svg"
-                        alt=""
-                        width={50}
-                        height={50}
-                      />
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="about-image">
-                  <figure
-                    className="reveal image-anime"
-                    style={{
-                      transform: "translate(0px, 0px)",
-                      opacity: 1,
-                      visibility: "inherit",
-                    }}
-                  >
-                    <Image
-                      src="/images/video-img-1.jpg"
-                      alt=""
-                      width={600}
-                      height={400}
-                      layout="responsive"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="about-content">
-                <div className="section-title">
-                  <h3
-                    className="wow fadeInUp"
-                    style={{ visibility: "hidden", animationName: "none" }}
-                  >
-                    About Jivux
-                  </h3>
-                  <h2 className="text-anime">
-                    {aboutTitleChars.map((line, lineIndex) => (
-                      <div
-                        key={lineIndex}
-                        className="line"
-                        style={{
-                          display: "block",
-                          textAlign: "left",
-                          width: "100%",
-                        }}
-                      >
-                        {line.words.map((word, wordIndex) => (
-                          <React.Fragment key={wordIndex}>
-                            <div
-                              className="word"
-                              style={{ display: "inline-block" }}
-                            >
-                              {word.chars.map((char, charIndex) => (
-                                <div
-                                  key={charIndex}
-                                  className="char"
-                                  style={{
-                                    display: "inline-block",
-                                    opacity: 1,
-                                    visibility: "inherit",
-                                    transform: "translate(0px, 0px)",
-                                  }}
-                                >
-                                  {char}
-                                </div>
-                              ))}
-                            </div>{" "}
-                          </React.Fragment>
-                        ))}
-                      </div>
-                    ))}
-                  </h2>
-                </div>
-
-                <div className="about-content-body">
-                  <p
-                    className="wow fadeInUp"
-                    data-wow-delay="0.5s"
-                    style={{
-                      visibility: "hidden",
-                      animationDelay: "0.5s",
-                      animationName: "none",
-                    }}
-                  >
-                    Duis pulvinar metus elit, ut aliquam est sollicitudin
-                    finibus. Integer lobortis est interdum. Suspendisse nunc
-                    est, varius quis fringilla ac, commodo a ante. Praesent non
-                    elit cursus, aliquam sapien quis, dictum tortor.
-                  </p>
-
-                  <ul>
-                    {aboutFeatures.map((feature) => (
-                      <li
-                        key={feature.id}
-                        className="wow fadeInUp"
-                        data-wow-delay={feature.delay}
-                        style={{
-                          visibility: "hidden",
-                          animationDelay: feature.delay,
-                          animationName: "none",
-                        }}
-                      >
-                        <div className="icon-box">
-                          <Image
-                            src={feature.icon}
-                            alt=""
-                            width={30}
-                            height={30}
-                          />
-                        </div>
-                        <span>{feature.text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
