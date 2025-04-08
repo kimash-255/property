@@ -55,7 +55,7 @@ const FooterSection = () => {
             <div className="col-lg-4">
               <div className="footer-about">
                 <div className="footer-logo">
-                  <img src="images/logo/logo.png" alt="MyTown Karen" />
+                  <img src="/images/logo/logo.png" alt="MyTown Karen" />
                 </div>
 
                 <div className="footer-about-content">
