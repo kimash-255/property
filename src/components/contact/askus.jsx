@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
 
-
 const AskUs = () => {
   return (
-    <div class="infobar-cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
+    <div className="infobar-cta">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
             {/* <!-- Infobar Box Start --> */}
-            <div class="infobar-box">
-              <div class="row align-items-center">
-                <div class="col-lg-7">
+            <div className="infobar-box">
+              <div className="row align-items-center">
+                <div className="col-lg-7">
                   {/* <!-- Infobar Content Start --> */}
-                  <div class="cta-content">
-                    <h2 class="text-anime">Need Help? Talk to Our Expert.</h2>
-                    <p class="wow fadeInUp">
+                  <div className="cta-content">
+                    <h2 className="text-anime">
+                      Need Help? Talk to Our Expert.
+                    </h2>
+                    <p className="wow fadeInUp">
                       Contact us for assistance with your property search or any
                       inquiries.
                     </p>
@@ -22,13 +23,20 @@ const AskUs = () => {
                   {/* <!-- Infobar Content End --> */}
                 </div>
 
-                <div class="col-lg-5">
+                <div className="col-lg-5">
                   {/* <!-- CTA Button Start --> */}
-                  <div class="cta-button">
-                    <a href="#" class="btn-default btn-border">
-                      <i class="fa-solid fa-phone-volume"></i> +123 456 789
+                  <div className="cta-button">
+                    <a
+                      href="tel:+254777123456"
+                      className="btn-default btn-border"
+                    >
+                      <i className="fa-solid fa-phone-volume"></i> +254 777 444
+                      777
                     </a>
-                    <a href="#" class="btn-default">
+                    <a
+                      href="mailto:info@mytownkaren.com"
+                      className="btn-default"
+                    >
                       Contact Now
                     </a>
                   </div>
@@ -43,4 +51,5 @@ const AskUs = () => {
     </div>
   );
 };
+
 export default AskUs;

@@ -16,7 +16,7 @@ const Header = () => {
           <div className="container mx-auto flex flex-wrap items-center justify-between">
             {/* Logo */}
             <Link className="navbar-brand" to="/">
-              <img src="/images/logo.svg" alt="Logo" className="h-8" />
+              <img src="/images/logo/logo.png" alt="Logo" className="h-12" />
             </Link>
 
             {/* Main Menu */}
@@ -39,22 +39,19 @@ const Header = () => {
                 </li>
                 <li className="nav-item submenu">
                   <Link className="nav-link" to="#">
-                    Property
+                    Shop
                   </Link>
                   <ul>
-                    {propertyData.map((property) => (
-                      <li className="nav-item" key={property.slug}>
-                        <Link
-                          className="nav-link"
-                          to={`/property/${property.slug}`}
-                        >
-                          {property.title}
+                    {propertyData.map((shop) => (
+                      <li className="nav-item" key={shop.slug}>
+                        <Link className="nav-link" to={`/shop/${shop.slug}`}>
+                          {shop.title}
                         </Link>
                       </li>
                     ))}
                   </ul>
                 </li>
-                <li className="nav-item submenu">
+                {/* <li className="nav-item submenu">
                   <Link className="nav-link" to="#">
                     Pages
                   </Link>
@@ -80,7 +77,7 @@ const Header = () => {
                       </Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
 
                 <li>
                   <Link className="nav-link" to="/contact">

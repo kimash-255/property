@@ -1,88 +1,29 @@
 import { Link } from "react-router-dom";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-
-const properties = [
-  {
-    id: 1,
-    title: "Equestrian Family Home",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "images/property-1.jpg",
-    amenities: [
-      { icon: "images/icon-badroom.svg", text: "6 Bedsroom" },
-      { icon: "images/icon-bathroom.svg", text: "3 Bathrooms" },
-      { icon: "images/icon-area.svg", text: "720 sq ft" },
-      { icon: "images/icon-garage.svg", text: "1 Garages" },
-    ],
-  },
-  {
-    id: 2,
-    title: "Luxury Family Home",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Sell",
-    image: "images/property-2.jpg",
-    amenities: [
-      { icon: "images/icon-badroom.svg", text: "6 Bedsroom" },
-      { icon: "images/icon-bathroom.svg", text: "3 Bathrooms" },
-      { icon: "images/icon-area.svg", text: "720 sq ft" },
-      { icon: "images/icon-garage.svg", text: "1 Garages" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Equestrian Family Home",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "images/property-3.jpg",
-    amenities: [
-      { icon: "images/icon-badroom.svg", text: "6 Bedsroom" },
-      { icon: "images/icon-bathroom.svg", text: "3 Bathrooms" },
-      { icon: "images/icon-area.svg", text: "720 sq ft" },
-      { icon: "images/icon-garage.svg", text: "1 Garages" },
-    ],
-  },
-  {
-    id: 4,
-    title: "Mountain View Condos",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "images/property-4.jpg",
-    amenities: [
-      { icon: "images/icon-badroom.svg", text: "6 Bedsroom" },
-      { icon: "images/icon-bathroom.svg", text: "3 Bathrooms" },
-      { icon: "images/icon-area.svg", text: "720 sq ft" },
-      { icon: "images/icon-garage.svg", text: "1 Garages" },
-    ],
-  },
-];
+import { properties } from "@/data/featureddata";
 
 const Featured = () => {
   return (
-    <div class="featured-property">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            {/* <!-- Section Title Start --> */}
-            <div class="section-title">
-              <h3 class="wow fadeInUp">Properties</h3>
-              <h2 class="text-anime">Featured Properties</h2>
+    <div className="featured-property">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            {/* Section Title Start */}
+            <div className="section-title">
+              <h3 className="wow fadeInUp">Explore</h3>
+              <h2 className="text-anime">What We Offer</h2>
             </div>
-            {/* <!-- Section Title End --> */}
+            {/* Section Title End */}
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            {/* <!-- Property Slider Start --> */}
-            <div class="property-slider">
+        <div className="row">
+          <div className="col-md-12">
+            {/* Property Slider Start */}
+            <div className="property-slider">
               <Swiper
                 modules={[Pagination, Autoplay]}
                 pagination={{
@@ -101,55 +42,55 @@ const Featured = () => {
                   768: { slidesPerView: 2 },
                   1024: { slidesPerView: 3 },
                 }}
-                class="swiper"
+                className="swiper"
               >
                 {properties.map((property) => (
-                  <SwiperSlide key={property.id} class="swiper-slide">
-                    {/* <!-- Property Item Start --> */}
-                    <div class="property-item">
-                      {/* <!-- Property Item Header Start --> */}
-                      <div class="property-header">
-                        <figure class="image-anime">
-                          <img src={property.image} alt="" />
+                  <SwiperSlide key={property.id} className="swiper-slide">
+                    {/* Property Item Start */}
+                    <div className="property-item">
+                      {/* Property Item Header Start */}
+                      <div className="property-header">
+                        <figure className="image-anime">
+                          <img src={property.image} alt={property.title} />
                         </figure>
-                        <span class="property-label">{property.type}</span>
+                        <span className="property-label">{property.type}</span>
                       </div>
-                      {/* <!-- Property Item Header End --> */}
+                      {/* Property Item Header End */}
 
-                      {/* <!-- Property Item Body Start --> */}
-                      <div class="property-body">
+                      {/* Property Item Body Start */}
+                      <div className="property-body">
                         <h3>{property.title}</h3>
                         <p>{property.location}</p>
 
-                        <div class="property-meta">
+                        <div className="property-meta">
                           {property.amenities.map((amenity, index) => (
-                            <div class="property-amenity-item" key={index}>
-                              <div class="icon-box">
-                                <img src={amenity.icon} alt="" />
+                            <div className="property-amenity-item" key={index}>
+                              <div className="icon-box">
+                                <img src={amenity.icon} alt={amenity.text} />
                               </div>
                               <span>{amenity.text}</span>
                             </div>
                           ))}
                         </div>
                       </div>
-                      {/* <!-- Property Item Body End --> */}
+                      {/* Property Item Body End */}
 
-                      {/* <!-- Property Item Footer Start --> */}
-                      <div class="property-footer">
-                        <p class="property-price">{property.price}</p>
-                        <Link to="#" class="btn-default">
-                          View Property
+                      {/* Property Item Footer Start */}
+                      <div className="property-footer">
+                        <p className="property-price">{property.price}</p>
+                        <Link to="#" className="btn-default">
+                          View More
                         </Link>
                       </div>
-                      {/* <!-- Property Item Footer End --> */}
+                      {/* Property Item Footer End */}
                     </div>
-                    {/* <!-- Property Item End --> */}
+                    {/* Property Item End */}
                   </SwiperSlide>
                 ))}
-                <div class="swiper-pagination"></div>
+                <div className="swiper-pagination"></div>
               </Swiper>
             </div>
-            {/* <!-- Property Slider End --> */}
+            {/* Property Slider End */}
           </div>
         </div>
       </div>

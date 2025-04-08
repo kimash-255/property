@@ -2,29 +2,25 @@ import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   return (
-    <footer className="footer">
-      {/* <!-- Footer Newsletter Start --> */}
-      <div className="footer-newsletter">
+    <footer className="footer ">
+      {/* Footer Newsletter Start */}
+      <div className="footer-newsletter ">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              {/* <!-- Newsletter Box Start --> */}
               <div className="newsletter-box">
                 <div className="row align-items-center">
                   <div className="col-lg-6">
-                    {/* <!-- Section Title Start --> */}
                     <div className="newsletter-title">
-                      <h2>Subscribe Our Newsletter</h2>
+                      <h2>Subscribe to Our Newsletter</h2>
                       <p>
-                        Be the first get all updates and offers from us.
-                        Subscribe
+                        Stay in the loop with the latest news, events, and
+                        offers from MyTown Karen.
                       </p>
                     </div>
-                    {/* <!-- Section Title End --> */}
                   </div>
 
                   <div className="col-lg-6">
-                    {/* <!-- Newsletter Form Start --> */}
                     <div className="newsletter-form">
                       <form action="#">
                         <div className="row g-0 align-items-center">
@@ -43,37 +39,32 @@ const FooterSection = () => {
                         </div>
                       </form>
                     </div>
-                    {/* <!-- Newsletter Form End --> */}
                   </div>
                 </div>
               </div>
-              {/* <!-- Newsletter Box End --> */}
             </div>
           </div>
         </div>
       </div>
-      {/* <!-- Footer Newsletter End --> */}
+      {/* Footer Newsletter End */}
 
-      {/* <!-- Mega Footer Start --> */}
+      {/* Mega Footer Start */}
       <div className="mega-footer">
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
-              {/* <!-- Footer About Start --> */}
               <div className="footer-about">
-                {/* <!-- Footer Logo Start --> */}
                 <div className="footer-logo">
-                  <img src="images/footer-logo.svg" alt="" />
+                  <img src="images/logo/logo.png" alt="MyTown Karen" />
                 </div>
-                {/* <!-- Footer Logo End --> */}
 
-                {/* <!-- Footer About Content Start --> */}
                 <div className="footer-about-content">
-                  <p>Place to be</p>
+                  <p>
+                    MyTown Karen – Your go-to destination for shopping, dining,
+                    and more.
+                  </p>
                 </div>
-                {/* <!-- Footer About Content End --> */}
 
-                {/* <!-- Footer Social Link Start --> */}
                 <div className="footer-social-links">
                   <ul>
                     <li>
@@ -98,95 +89,78 @@ const FooterSection = () => {
                     </li>
                   </ul>
                 </div>
-                {/* <!-- Footer Social Link End --> */}
               </div>
-              {/* <!-- Footer About End --> */}
             </div>
 
             <div className="col-lg-3 col-md-6">
-              {/* <!-- Footer Contact Info Start --> */}
               <div className="footer-contact-info">
                 <h3>Contact Info</h3>
 
-                {/* <!-- Footer Contact Info Box Start --> */}
                 <div className="footer-contact-box">
                   <div className="footer-info-box">
                     <div className="icon-box">
                       <img src="images/icon-location.svg" alt="" />
                     </div>
-
-                    <p>123, Town, Street no, Cityname, Country 123456</p>
+                    <p>MyTown Karen, Karen Road, Nairobi, Kenya</p>
                   </div>
 
                   <div className="footer-info-box">
                     <div className="icon-box">
                       <img src="images/icon-phone.svg" alt="" />
                     </div>
-
-                    <p>+0 12345 67890</p>
+                    <p>+254 777 123 456</p>
                   </div>
 
                   <div className="footer-info-box">
                     <div className="icon-box">
                       <img src="images/icon-email.svg" alt="" />
                     </div>
-
-                    <p>info@domainname.com</p>
+                    <p>info@mytownkaren.co.ke</p>
                   </div>
                 </div>
-                {/* <!-- Footer Contact Info Box End --> */}
               </div>
-              {/* <!-- Footer Contact Info End --> */}
             </div>
 
             <div className="col-lg-2 col-md-6">
-              {/* <!-- Footer Quick Link Starts --> */}
               <div className="footer-quick-links">
                 <h3>Quick Links</h3>
                 <ul>
                   <li>
-                    <Link to="#">Home</Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="#">Listing</Link>
+                    <Link to="/about">About Us</Link>
                   </li>
                   <li>
-                    <Link to="#">Property</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                   <li>
-                    <Link to="#">Blog</Link>
-                  </li>
-                  <li>
-                    <Link to="#">Contact Us</Link>
+                    <Link to="/offers">Offers</Link>
                   </li>
                 </ul>
               </div>
-              {/* <!-- Footer Quick Link End --> */}
             </div>
 
             <div className="col-lg-3">
-              {/* <!-- Footer Quick Link Starts --> */}
               <div className="footer-appointment">
                 <h3>Appointment</h3>
-
                 <div className="footer-appointment-content">
                   <p>
-                    Stay informed with the latest updates and insights.
-                    Subscribe to receive exclusive news and offers directly to
-                    your inbox.
+                    Interested in leasing space or learning more? Book an
+                    appointment with our team today.
                   </p>
                   <Link to="#" className="btn-default">
                     Book Appointment
                   </Link>
                 </div>
               </div>
-              {/* <!-- Footer Quick Link End --> */}
             </div>
           </div>
         </div>
       </div>
-      {/* <!-- Mega Footer End --> */}
+      {/* Mega Footer End */}
     </footer>
   );
 };
+
 export default FooterSection;

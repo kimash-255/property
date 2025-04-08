@@ -14,10 +14,10 @@ const AboutPage = () => {
       <Breadcrumb />
       <MainAbout />
       <Process />
-      <Gallery />
+      {/* <Gallery /> */}
       <Testimonial />
       {/* <Partners /> */}
-      <Agents />
+      {/* <Agents /> */}
     </Layout>
   );
 };

@@ -1,88 +1,5 @@
 import { Link } from "react-router-dom";
-
-// Mock data - in a real app, this would come from an API or database
-const propertyData = [
-  {
-    id: 1,
-    title: "Cedar Ridge Estates",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "/images/property-1.jpg",
-    bedrooms: 6,
-    bathrooms: 3,
-    area: 720,
-    garages: 1,
-  },
-  {
-    id: 2,
-    title: "Willow Creek Manor",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "/images/property-2.jpg",
-    bedrooms: 6,
-    bathrooms: 3,
-    area: 720,
-    garages: 1,
-  },
-  {
-    id: 3,
-    title: "Sunset View Apartments",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "/images/property-3.jpg",
-    bedrooms: 6,
-    bathrooms: 3,
-    area: 720,
-    garages: 1,
-  },
-  {
-    id: 4,
-    title: "Riverwalk Residences",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "/images/property-4.jpg",
-    bedrooms: 6,
-    bathrooms: 3,
-    area: 720,
-    garages: 1,
-  },
-  {
-    id: 5,
-    title: "Mountain View Condos",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "/images/property-5.jpg",
-    bedrooms: 6,
-    bathrooms: 3,
-    area: 720,
-    garages: 1,
-  },
-  {
-    id: 6,
-    title: "Beachfront Bungalows",
-    location: "New York City, CA, USA",
-    price: "$150,000",
-    type: "Rent",
-    image: "/images/property-6.jpg",
-    bedrooms: 6,
-    bathrooms: 3,
-    area: 720,
-    garages: 1,
-  },
-];
-
-const categories = [
-  { id: 1, name: "Houses" },
-  { id: 2, name: "Apartments" },
-  { id: 3, name: "Office" },
-  { id: 4, name: "Townhome" },
-  { id: 5, name: "Bungalow" },
-];
+import propertyData from "@/data/propertydata";
 
 const Listing = () => {
   return (
@@ -93,119 +10,120 @@ const Listing = () => {
             {/* Property Listings Start */}
             <div className="property-listings">
               <div className="row">
-                {propertyData.map((property, index) => (
-                  <div className="col-md-6" key={property.id}>
-                    {/* Property Item Start */}
-                    <div
-                      className="property-item wow fadeInUp"
-                      data-wow-delay={`${0.25 + index * 0.25}s`}
-                      style={{
-                        visibility: "visible",
-                        animationDelay: `${0.25 + index * 0.25}s`,
-                        animationName: "fadeInUp",
-                      }}
-                    >
-                      {/* Property Item Header Start */}
-                      <div className="property-header">
-                        <figure className="image-anime">
-                          <img
-                            src={property.image}
-                            alt={property.title}
-                            width="400"
-                            height="300"
-                            style={{ width: "100%", height: "auto" }}
-                          />
-                        </figure>
-                        <span className="property-label">{property.type}</span>
-                      </div>
-                      {/* Property Item Header End */}
+                {propertyData.map((property, index) => {
+                  const {
+                    slug,
+                    images,
+                    title,
+                    location,
+                    storeSize,
+                    unitsAvailable,
+                    parkingSpaces,
+                    features,
+                  } = property;
 
-                      {/* Property Item Body Start */}
-                      <div className="property-body">
-                        <h3>{property.title}</h3>
-                        <p>{property.location}</p>
+                  return (
+                    <div className="col-md-6" key={slug}>
+                      <div
+                        className="property-item wow fadeInUp"
+                        data-wow-delay={`${0.25 + index * 0.25}s`}
+                        style={{
+                          visibility: "visible",
+                          animationDelay: `${0.25 + index * 0.25}s`,
+                          animationName: "fadeInUp",
+                        }}
+                      >
+                        {/* Image and Type */}
+                        <div className="property-header">
+                          <figure className="image-anime">
+                            <img
+                              src={images[0]}
+                              alt={title}
+                              width="400"
+                              height="300"
+                              style={{ width: "100%", height: "auto" }}
+                            />
+                          </figure>
+                          <span className="property-label">For Sale</span>
+                        </div>
 
-                        <div className="property-meta">
-                          <div className="property-amenity-item">
-                            <div className="icon-box">
-                              <img
-                                src="/images/icon-badroom.svg"
-                                alt="Bedroom icon"
-                                width="20"
-                                height="20"
-                              />
+                        {/* Property Body */}
+                        <div className="property-body">
+                          <h3>{title}</h3>
+                          <p>{location}</p>
+
+                          <div className="property-meta">
+                            <div className="property-amenity-item">
+                              <div className="icon-box">
+                                <img
+                                  src="/images/icon-area.svg"
+                                  alt="Area icon"
+                                  width="20"
+                                  height="20"
+                                />
+                              </div>
+                              <span>{storeSize}</span>
                             </div>
-                            <span>
-                              {property.bedrooms} Bedroom
-                              {property.bedrooms !== 1 ? "s" : ""}
-                            </span>
-                          </div>
 
-                          <div className="property-amenity-item">
-                            <div className="icon-box">
-                              <img
-                                src="/images/icon-bathroom.svg"
-                                alt="Bathroom icon"
-                                width="20"
-                                height="20"
-                              />
+                            <div className="property-amenity-item">
+                              <div className="icon-box">
+                                <img
+                                  src="/images/icon-badroom.svg"
+                                  alt="Units Available icon"
+                                  width="20"
+                                  height="20"
+                                />
+                              </div>
+                              <span>
+                                {unitsAvailable} Unit
+                                {unitsAvailable !== 1 ? "s" : ""}
+                              </span>
                             </div>
-                            <span>
-                              {property.bathrooms} Bathroom
-                              {property.bathrooms !== 1 ? "s" : ""}
-                            </span>
-                          </div>
 
-                          <div className="property-amenity-item">
-                            <div className="icon-box">
-                              <img
-                                src="/images/icon-area.svg"
-                                alt="Area icon"
-                                width="20"
-                                height="20"
-                              />
+                            <div className="property-amenity-item">
+                              <div className="icon-box">
+                                <img
+                                  src="/images/icon-garage.svg"
+                                  alt="Parking icon"
+                                  width="20"
+                                  height="20"
+                                />
+                              </div>
+                              <span>
+                                {parkingSpaces} Parking Space
+                                {parkingSpaces !== 1 ? "s" : ""}
+                              </span>
                             </div>
-                            <span>{property.area} sq ft</span>
-                          </div>
 
-                          <div className="property-amenity-item">
-                            <div className="icon-box">
-                              <img
-                                src="/images/icon-garage.svg"
-                                alt="Garage icon"
-                                width="20"
-                                height="20"
-                              />
+                            <div className="property-amenity-item">
+                              <div className="icon-box">
+                                <img
+                                  src="/images/icon-bathroom.svg"
+                                  alt="Features icon"
+                                  width="20"
+                                  height="20"
+                                />
+                              </div>
+                              <span>{features.join(", ")}</span>
                             </div>
-                            <span>
-                              {property.garages} Garage
-                              {property.garages !== 1 ? "s" : ""}
-                            </span>
                           </div>
                         </div>
-                      </div>
-                      {/* Property Item Body End */}
 
-                      {/* Property Item Footer Start */}
-                      <div className="property-footer">
-                        <p className="property-price">{property.price}</p>
-                        <Link
-                          href={`/properties/${property.id}`}
-                          className="btn-default"
-                        >
-                          View Property
-                        </Link>
+                        {/* Footer */}
+                        <div className="property-footer">
+                          <Link to={`/shop/${slug}`} className="btn-default">
+                            View Shop
+                          </Link>
+                        </div>
                       </div>
-                      {/* Property Item Footer Start */}
                     </div>
-                    {/* Property Item End */}
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
+              {/* Pagination */}
               <div className="row">
                 <div className="col-md-12">
-                  {/* Post Pagination Start */}
                   <div
                     className="post-pagination wow fadeInUp"
                     data-wow-delay="1.5s"
@@ -237,40 +155,15 @@ const Listing = () => {
                       </li>
                     </ul>
                   </div>
-                  {/* Post Pagination End */}
                 </div>
               </div>
             </div>
             {/* Property Listings End */}
           </div>
 
+          {/* Sidebar */}
           <div className="col-lg-4">
-            {/* Property Sidebar Start */}
             <div className="property-sidebar">
-              {/* Property Category Box Start */}
-              <div
-                className="property-category-box wow fadeInUp"
-                data-wow-delay="0.25s"
-                style={{
-                  visibility: "visible",
-                  animationDelay: "0.25s",
-                  animationName: "fadeInUp",
-                }}
-              >
-                <h3>Categories</h3>
-                <ul>
-                  {categories.map((category) => (
-                    <li key={category.id}>
-                      <Link href={`/categories/${category.id}`}>
-                        {category.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              {/* Property Category Box End */}
-
-              {/* Need Help? Ask Our Experts Start */}
               <div
                 className="expert-help-box wow fadeInUp"
                 data-wow-delay="0.5s"
@@ -287,8 +180,8 @@ const Listing = () => {
               >
                 <h3>Need Help? Ask Our Experts</h3>
                 <p>
-                  Our team of real estate professionals is ready to assist you
-                  with any questions.
+                  Our team of experts is ready to assist you with any questions
+                  about available shops.
                 </p>
 
                 <div className="experts-list" style={{ marginTop: "20px" }}>
@@ -332,7 +225,7 @@ const Listing = () => {
                           fontSize: "14px",
                         }}
                       >
-                        Real Estate Agent
+                        Shop Expert
                       </p>
                       <div
                         className="expert-contact"
@@ -342,15 +235,15 @@ const Listing = () => {
                           <i
                             className="fa fa-phone"
                             style={{ marginRight: "5px" }}
-                          ></i>{" "}
+                          ></i>
                           +1 (555) 123-4567
                         </p>
                         <p style={{ margin: "2px 0" }}>
                           <i
                             className="fa fa-envelope"
                             style={{ marginRight: "5px" }}
-                          ></i>{" "}
-                          sarah@realestate.com
+                          ></i>
+                          sarah@shopfinder.com
                         </p>
                       </div>
                     </div>
@@ -358,7 +251,7 @@ const Listing = () => {
                 </div>
 
                 <Link
-                  href="/contact"
+                  to="/contact"
                   className="btn-default"
                   style={{
                     display: "block",
@@ -376,10 +269,9 @@ const Listing = () => {
                   Contact All Experts
                 </Link>
               </div>
-              {/* Need Help? Ask Our Experts End */}
             </div>
-            {/* Property Sidebar End */}
           </div>
+          {/* Sidebar End */}
         </div>
       </div>
     </div>

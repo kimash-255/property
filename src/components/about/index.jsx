@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 const About = () => {
   return (
     <div className="about-us">
@@ -67,11 +66,11 @@ const About = () => {
                     animationName: "fadeInUp",
                   }}
                 >
-                  About Jivux
+                  About MyTown Karen
                 </h3>
 
                 <h2 className="text-anime">
-                  {["The Leading Real", "Estate About", "Marketplace."].map(
+                  {["A Neighborhood", "Street Mall Hub", "Like No Other"].map(
                     (line, i) => (
                       <div
                         key={i}
@@ -120,34 +119,36 @@ const About = () => {
                     visibility: "visible",
                     animationDelay: "0.5s",
                     animationName: "fadeInUp",
+                    color: "#fff", // This keeps the paragraph text white
                   }}
                 >
-                  Duis pulvinar metus elit, ut aliquam est sollicitudin finibus.
-                  Integer lobortis est interdum. Suspendisse nunc est, varius
-                  quis fringilla ac, commodo a ante. Praesent non elit cursus,
-                  aliquam sapien quis, dictum tortor.
+                  MyTown Karen is your all-in-one lifestyle destination — a
+                  vibrant street mall that brings together shopping, dining,
+                  wellness, and daily convenience all in one place. Located in
+                  the heart of Karen, it's where community and commerce blend
+                  seamlessly in a stylish, walkable setting.
                 </p>
 
                 <ul>
                   {[
                     {
                       icon: "icon-about-1.svg",
-                      label: "Smart Home Design",
+                      label: "Dine, Sip & Enjoy",
                       delay: "0.75s",
                     },
                     {
                       icon: "icon-about-2.svg",
-                      label: "Beautiful Scene Around",
+                      label: "Retail & Essentials",
                       delay: "1s",
                     },
                     {
                       icon: "icon-about-3.svg",
-                      label: "Exceptional Lifestyle",
+                      label: "Health & Wellness",
                       delay: "1.25s",
                     },
                     {
                       icon: "icon-about-4.svg",
-                      label: "Complete 24/7 Security",
+                      label: "Fuel, Forex & More",
                       delay: "1.5s",
                     },
                   ].map((item, idx) => (
@@ -159,12 +160,13 @@ const About = () => {
                         visibility: "visible",
                         animationDelay: item.delay,
                         animationName: "fadeInUp",
+                        color: "#fff", // Keeps list items text white
                       }}
                     >
                       <div className="icon-box">
                         <img src={`/images/${item.icon}`} alt="" />
                       </div>
-                      <span>{item.label}</span>
+                      <span style={{ color: "#fff" }}>{item.label}</span>
                     </li>
                   ))}
                 </ul>

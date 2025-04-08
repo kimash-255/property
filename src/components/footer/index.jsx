@@ -4,9 +4,12 @@ import Copyright from "./copyright";
 const Footer = () => {
   return (
     <>
-      <FooterSection />
-      <Copyright />
+      <div style={{ backgroundColor: "#fff", position: "relative", zIndex: 1 }}>
+        <FooterSection />
+        <Copyright />
+      </div>
     </>
   );
 };
+
 export default Footer;

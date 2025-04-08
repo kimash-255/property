@@ -5,31 +5,26 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "John Doe",
-
+    name: "Michael Karanja",
     content:
-      "MyTown Karen is one of the best malls in Nairobi! The variety of stores and restaurants make it a perfect spot for family outings and shopping. The atmosphere is vibrant, and the staff are friendly. I always look forward to visiting this mall whenever I’m in the area.",
+      "MyTown Karen is the perfect destination for both shopping and dining! The wide variety of stores and eateries cater to all tastes and needs. The family-friendly atmosphere makes it a go-to spot for weekend outings. The staff are always helpful, making every visit enjoyable. I highly recommend it!",
   },
   {
-    name: "Jane Smith",
-
+    name: "Nia Mwangi",
     content:
-      "I love shopping at MyTown Karen! From the wide selection of shops to the delicious food court options, there’s something for everyone. It's well-kept, and I appreciate how safe I feel while shopping. I always find great deals and enjoy spending time here.",
+      "I love spending time at MyTown Karen! Whether I’m shopping for the latest fashion or enjoying a meal at the food court, there's always something exciting. It’s well-maintained, and I always feel safe and relaxed while shopping. I’ve found so many great deals here, and I love the variety of options.",
   },
   {
-    name: "Samuel Kimani",
-
+    name: "Juma Mohamed",
     content:
-      "MyTown Karen is a wonderful place to hang out with friends and family. The mall has modern amenities, and I always feel comfortable. The events held at the mall are a bonus too! Whether it's a weekend stroll or shopping spree, I love coming here.",
+      "MyTown Karen is an amazing place to spend time with family and friends. The mall offers modern amenities, a range of entertainment options, and plenty of shopping choices. I always look forward to the events and promotions. It's the ideal place for a fun day out in Karen.",
   },
   {
-    name: "Elizabeth Wangari",
-
+    name: "Amina Hassan",
     content:
-      "I have been a frequent visitor to MyTown Karen, and every experience has been great. The range of services offered, from entertainment to shopping, makes it the go-to destination in Karen. Plus, the parking is always easy, which makes visits so much more convenient.",
+      "As a frequent visitor, I can confidently say that MyTown Karen is the best place to visit for shopping, dining, and entertainment in the area. The convenience of easy parking and the variety of services offered make it the ultimate destination. The mall always provides a seamless and enjoyable experience.",
   },
 ];
-
 const Testimonial = () => {
   return (
     <div className="testimonials py-20 bg-gray-50">

@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
               </div>
 
               <div className="exclusive-agents">
-                <h5>10k+ Exclusive Agents</h5>
+                <h5>Contact Our Us Now To Book a Space</h5>
                 <img src="images/exclusive-agents.png" alt="" />
               </div>
             </div>
@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
               <div className="section-title">
                 <h3 className="wow fadeInUp">Why Choose Us</h3>
                 <h2 className="text-anime">
-                  Let's Find the Right Selling Option for You
+                  Discover Unmatched Value & Convenience at MyTown Karen
                 </h2>
               </div>
               {/* <!-- Section Title End --> */}
@@ -44,20 +44,26 @@ const WhyChooseUs = () => {
                 className="why-choose-us-body wow fadeInUp"
                 data-wow-delay="0.25s"
               >
-                <p>
-                  We make the process easy with expert guidance and personalized
-                  solutions. Our team is dedicated to helping you find the
-                  perfect fit, ensuring a seamless and stress-free experience.
+                <p style={{ color: "white" }}>
+                  At MyTown Karen, we offer a unique shopping experience with a
+                  wide variety of retail, dining, and service options. Our
+                  community-driven approach ensures that you’ll find everything
+                  you need in one place, making it easy and convenient for your
+                  business or shopping.
                 </p>
 
                 <ul>
-                  <li>Find Excellent Deals</li>
-                  <li>Friendly Host & Fast Support</li>
-                  <li>List Your Own Property</li>
+                  <li style={{ color: "white" }}>
+                    Wide Range of Retail Spaces
+                  </li>
+                  <li style={{ color: "white" }}>
+                    High Foot Traffic & Central Location
+                  </li>
+                  <li style={{ color: "white" }}>Flexible Leasing Options</li>
                 </ul>
 
                 <Link to="#" className="btn-default">
-                  Read More
+                  Learn More
                 </Link>
               </div>
             </div>

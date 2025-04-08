@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 const MainAbout = () => {
   return (
     <div className="about-us">
@@ -67,7 +66,7 @@ const MainAbout = () => {
                     animationName: "fadeInUp",
                   }}
                 >
-                  About Jivux
+                  About MyTown Karen
                 </h3>
                 <h2 className="text-anime">
                   <div
@@ -79,13 +78,29 @@ const MainAbout = () => {
                     }}
                   >
                     <div className="word" style={{ display: "inline-block" }}>
+                      <span className="char">Your</span>
+                    </div>{" "}
+                    <div className="word" style={{ display: "inline-block" }}>
+                      <span className="char">Lifestyle</span>
+                    </div>{" "}
+                    <div className="word" style={{ display: "inline-block" }}>
+                      <span className="char">Destination</span>
+                    </div>
+                  </div>
+
+                  <div
+                    className="line"
+                    style={{
+                      display: "block",
+                      textAlign: "left",
+                      width: "100%",
+                    }}
+                  >
+                    <div className="word" style={{ display: "inline-block" }}>
+                      <span className="char">In</span>
+                    </div>{" "}
+                    <div className="word" style={{ display: "inline-block" }}>
                       <span className="char">The</span>
-                    </div>{" "}
-                    <div className="word" style={{ display: "inline-block" }}>
-                      <span className="char">Leading</span>
-                    </div>{" "}
-                    <div className="word" style={{ display: "inline-block" }}>
-                      <span className="char">Real</span>
                     </div>
                   </div>
 
@@ -98,23 +113,13 @@ const MainAbout = () => {
                     }}
                   >
                     <div className="word" style={{ display: "inline-block" }}>
-                      <span className="char">Estate</span>
+                      <span className="char">Heart</span>
                     </div>{" "}
                     <div className="word" style={{ display: "inline-block" }}>
-                      <span className="char">About</span>
-                    </div>
-                  </div>
-
-                  <div
-                    className="line"
-                    style={{
-                      display: "block",
-                      textAlign: "left",
-                      width: "100%",
-                    }}
-                  >
+                      <span className="char">of</span>
+                    </div>{" "}
                     <div className="word" style={{ display: "inline-block" }}>
-                      <span className="char">Marketplace.</span>
+                      <span className="char">Karen</span>
                     </div>
                   </div>
                 </h2>
@@ -132,10 +137,11 @@ const MainAbout = () => {
                     animationName: "fadeInUp",
                   }}
                 >
-                  Duis pulvinar metus elit, ut aliquam est sollicitudin finibus.
-                  Integer lobortis est interdum. Suspendisse nunc est, varius
-                  quis fringilla ac, commodo a ante. Praesent non elit cursus,
-                  aliquam sapien quis, dictum tortor.
+                  MyTown Karen is more than just a shopping destination—it's a
+                  vibrant community hub. Whether you're here to shop, dine, or
+                  connect, our modern facilities and curated experiences offer
+                  something for everyone. Discover a space where convenience,
+                  comfort, and creativity meet.
                 </p>
 
                 <ul>
@@ -151,7 +157,7 @@ const MainAbout = () => {
                     <div className="icon-box">
                       <img src="/images/icon-about-1.svg" alt="Smart Home" />
                     </div>
-                    <span>Smart Home Design</span>
+                    <span>Diverse Retail & Dining</span>
                   </li>
 
                   <li
@@ -169,7 +175,7 @@ const MainAbout = () => {
                         alt="Beautiful Scene"
                       />
                     </div>
-                    <span>Beautiful Scene Around</span>
+                    <span>Family-Friendly Atmosphere</span>
                   </li>
 
                   <li
@@ -184,7 +190,7 @@ const MainAbout = () => {
                     <div className="icon-box">
                       <img src="/images/icon-about-3.svg" alt="Lifestyle" />
                     </div>
-                    <span>Exceptional Lifestyle</span>
+                    <span>Modern & Comfortable Spaces</span>
                   </li>
 
                   <li
@@ -199,7 +205,7 @@ const MainAbout = () => {
                     <div className="icon-box">
                       <img src="/images/icon-about-4.svg" alt="Security" />
                     </div>
-                    <span>Complete 24/7 Security</span>
+                    <span>Safe & Secure Environment</span>
                   </li>
                 </ul>
               </div>

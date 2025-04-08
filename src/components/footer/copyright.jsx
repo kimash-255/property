@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Copyright = () => {
-  const currentYear = new Date().getFullYear(); // Dynamically get the current year
+  const currentYear = new Date().getFullYear();
 
   return (
     <div className="footer-copyright-links">
@@ -25,7 +25,10 @@ const Copyright = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/terms-and-conditions" aria-label="Terms and Conditions">
+                  <Link
+                    to="/terms-and-conditions"
+                    aria-label="Terms and Conditions"
+                  >
                     Terms & Condition
                   </Link>
                 </li>

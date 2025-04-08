@@ -1,27 +1,55 @@
 const Hero = () => {
   return (
-    <div className="hero hero-video">
-      <div className="hero-section">
+    <div className="hero hero-video" style={{ height: "100vh" }}>
+      <div className="" style={{ height: "100%" }}>
         {/* Video Start */}
-        <div className="hero-bg-video">
-          <video autoPlay muted loop id="myVideo">
-            <source src="images/hero.mp4" type="video/mp4" />
+        <div
+          className="hero-bg-video"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+            zIndex: -1,
+          }}
+        >
+          <video
+            autoPlay
+            muted
+            loop
+            id="myVideo"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          >
+            <source src="images/logo/hero.mp4" type="video/mp4" />
           </video>
         </div>
         {/* Video End */}
 
-        <div className="container">
-          <div className="row align-items-center">
+        <div className="container" style={{ height: "100%" }}>
+          <div
+            className="row align-items-center"
+            style={{
+              height: "100%",
+            }}
+          >
             <div className="col-lg-12">
-              <div className="hero-content">
+              <div
+                className="hero-content"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  height: "80%", // Slightly reduce to give space below
+                  paddingBottom: "5vh", // Adds spacing before next component
+                }}
+              >
                 <div className="section-title">
-                  <h3
-                    className="wow fadeInUp"
-                    style={{ visibility: "visible", animationName: "fadeInUp" }}
-                  >
-                    Welcome to Jivux
-                  </h3>
-
                   <h1 className="text-anime">
                     <div
                       className="line"
@@ -32,7 +60,7 @@ const Hero = () => {
                       }}
                     >
                       <div className="word" style={{ display: "inline-block" }}>
-                        {"Invest Today in".split("").map((char, idx) => (
+                        {"Welcome to".split("").map((char, idx) => (
                           <span
                             key={`line1-char-${idx}`}
                             className="wow fadeInUp"
@@ -57,16 +85,54 @@ const Hero = () => {
                       }}
                     >
                       <div className="word" style={{ display: "inline-block" }}>
-                        {"Your Dream Home".split("").map((char, idx) => (
+                        {/* "My" in dark blue */}
+                        {"My".split("").map((char, idx) => (
                           <span
-                            key={`line2-char-${idx}`}
+                            key={`line2-char-my-${idx}`}
                             className="wow fadeInUp"
                             data-wow-delay={`${
-                              0.1 + idx * 0.05 + "Invest Today in".length * 0.05
+                              0.1 + ("Welcome to".length + idx) * 0.05
                             }s`}
                             style={{
                               display: "inline-block",
                               whiteSpace: "pre",
+                              color: "#002f49",
+                            }}
+                          >
+                            {char === " " ? "\u00A0" : char}
+                          </span>
+                        ))}
+
+                        {/* "town" in green */}
+                        {"town".split("").map((char, idx) => (
+                          <span
+                            key={`line2-char-town-${idx}`}
+                            className="wow fadeInUp"
+                            data-wow-delay={`${
+                              0.1 + ("Welcome toMy".length + idx) * 0.05
+                            }s`}
+                            style={{
+                              display: "inline-block",
+                              whiteSpace: "pre",
+                              color: "#a1cd44",
+                            }}
+                          >
+                            {char === " " ? "\u00A0" : char}
+                          </span>
+                        ))}
+
+                        {/* " Karen" in white */}
+                        {" Karen".split("").map((char, idx) => (
+                          <span
+                            key={`line2-char-karen-${idx}`}
+                            className="wow fadeInUp"
+                            data-wow-delay={`${
+                              0.1 + ("Welcome toMytown".length + idx) * 0.05
+                            }s`}
+                            style={{
+                              display: "inline-block",
+                              whiteSpace: "pre",
+                              color: "#ffffff",
                             }}
                           >
                             {char === " " ? "\u00A0" : char}
@@ -78,29 +144,14 @@ const Hero = () => {
                 </div>
 
                 <div
-                  className="hero-content-body wow fadeInUp"
-                  data-wow-delay="0.5s"
-                  style={{
-                    visibility: "visible",
-                    animationDelay: "0.5s",
-                    animationName: "fadeInUp",
-                  }}
-                >
-                  <p>
-                    Duis ultricies, tortor a accumsan fermentum, purus diam
-                    mollis velit, eu bibendum ipsum erat quis leo. Vestibulum
-                    finibus, leo dapibus feugiat rutrum, augue lacus rhoncus
-                    velit, vel scelerisque odio est.
-                  </p>
-                </div>
-
-                <div
                   className="hero-content-footer wow fadeInUp"
                   data-wow-delay="0.75s"
                   style={{
                     visibility: "visible",
                     animationDelay: "0.75s",
                     animationName: "fadeInUp",
+                    textAlign: "center",
+                    marginTop: "20px",
                   }}
                 >
                   <a href="#" className="btn-default">
@@ -115,76 +166,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Hero Search Form Start */}
-      <div className="hero-search-form-section">
-        <div className="container">
-          <div
-            className="hero-search-form wow fadeInUp"
-            data-wow-delay="1s"
-            style={{
-              visibility: "visible",
-              animationDelay: "1s",
-              animationName: "fadeInUp",
-            }}
-          >
-            <div className="search-heading">
-              <h4>Search Property</h4>
-            </div>
-
-            <form action="#" method="get">
-              <div className="row">
-                <div className="col-lg-2 col-md-6">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Enter keywords"
-                  />
-                </div>
-
-                <div className="col-lg-2 col-md-6">
-                  <select className="form-control">
-                    <option value="">Sell or Rent</option>
-                    <option>Sell</option>
-                    <option>Rent</option>
-                  </select>
-                </div>
-
-                <div className="col-lg-2 col-md-6">
-                  <select className="form-control">
-                    <option value="">Property Type</option>
-                    <option>Apartment</option>
-                    <option>Office</option>
-                  </select>
-                </div>
-
-                <div className="col-lg-2 col-md-6">
-                  <select className="form-control">
-                    <option value="">Location</option>
-                    <option>Surat</option>
-                    <option>Banglore</option>
-                  </select>
-                </div>
-
-                <div className="col-lg-2 col-md-6">
-                  <select className="form-control">
-                    <option value="">Amenities</option>
-                    <option>Swimming Pool</option>
-                    <option>Playarea</option>
-                  </select>
-                </div>
-
-                <div className="col-lg-2 col-md-6">
-                  <button type="submit" className="btn-default">
-                    Search
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      {/* Hero Search Form End */}
     </div>
   );
 };

@@ -5,15 +5,15 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Property = () => {
+const Shop = () => {
   const { slug } = useParams();
 
   if (!slug) return <p>Loading...</p>;
 
-  const property = propertyData.find((item) => item.slug === slug);
+  const shop = propertyData.find((item) => item.slug === slug);
 
-  if (!property) {
-    return <p>Property not found</p>;
+  if (!shop) {
+    return <p>Shop not found</p>;
   }
 
   return (
@@ -22,7 +22,7 @@ const Property = () => {
         <div className="row">
           <div className="col-lg-8">
             <div className="property-single-content">
-              {/* Property Photos Slider */}
+              {/* Shop Photos Slider */}
               <div
                 className="property-photos-slider wow fadeInUp"
                 data-wow-delay="0.25s"
@@ -36,13 +36,13 @@ const Property = () => {
                   loop={true}
                   className="property-photo-swiper"
                 >
-                  {property.images.map((src, index) => (
+                  {shop.images.map((src, index) => (
                     <SwiperSlide key={index}>
                       <div className="property-photo-item">
                         <figure className="image-anime">
                           <img
                             src={src}
-                            alt={`property-${index}`}
+                            alt={`shop-${index}`}
                             width={709}
                             height={400}
                           />
@@ -64,34 +64,24 @@ const Property = () => {
                 <div className="property-overview-box">
                   {[
                     {
-                      icon: "icon-bedrooms.svg",
-                      label: "Bedrooms",
-                      value: property.bedrooms,
+                      icon: "icon-badroom.svg",
+                      label: "Units Available",
+                      value: shop.unitsAvailable,
                     },
                     {
-                      icon: "icon-bathrooms.svg",
-                      label: "Bathrooms",
-                      value: property.bathrooms,
+                      icon: "icon-bathroom.svg",
+                      label: "Parking Spaces",
+                      value: shop.parkingSpaces,
                     },
                     {
-                      icon: "icon-areas.svg",
-                      label: "Area",
-                      value: property.area,
+                      icon: "icon-area.svg",
+                      label: "Store Size",
+                      value: shop.storeSize,
                     },
                     {
-                      icon: "icon-garages.svg",
-                      label: "Garages",
-                      value: property.garages,
-                    },
-                    {
-                      icon: "icon-built-year.svg",
+                      icon: "icon-garage.svg",
                       label: "Year Built",
-                      value: property.yearBuilt,
-                    },
-                    {
-                      icon: "icon-plot-size.svg",
-                      label: "Plot Size",
-                      value: property.plotSize,
+                      value: shop.yearBuilt,
                     },
                   ].map(({ icon, label, value }, index) => (
                     <div className="property-overview-item" key={index}>
@@ -112,26 +102,22 @@ const Property = () => {
                 </div>
               </div>
 
-              {/* About Property */}
+              {/* About Shop */}
               <div
                 className="about-property wow fadeInUp"
                 data-wow-delay="0.75s"
               >
                 <div className="property-single-subtitle">
-                  <h3>About This Property</h3>
+                  <h3>About This Shop</h3>
                 </div>
                 <div className="about-property-content">
-                  <p>{property.description}</p>
+                  <p>{shop.description}</p>
                   <div className="about-property-cta">
                     <Link to="/contact" className="btn-default btn-border">
                       Contact us
                     </Link>
-                    <a
-                      href={`tel:${property.phone}`}
-                      className="btn-default"
-                    >
-                      <i className="fa-solid fa-phone-volume"></i>{" "}
-                      {property.phone}
+                    <a href={`tel:${shop.phone}`} className="btn-default">
+                      <i className="fa-solid fa-phone-volume"></i> {shop.phone}
                     </a>
                   </div>
                 </div>
@@ -147,7 +133,7 @@ const Property = () => {
                 </div>
                 <div className="property-amenities-box">
                   <ul>
-                    {property.features.map((feature, index) => (
+                    {shop.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
@@ -164,7 +150,7 @@ const Property = () => {
                 </div>
                 <div className="property-map-iframe">
                   <iframe
-                    src={property.mapEmbedUrl}
+                    src={shop.mapEmbedUrl}
                     width="600"
                     height="450"
                     style={{ border: 0 }}
@@ -190,18 +176,13 @@ const Property = () => {
                   {[
                     {
                       icon: "icon-property-location.svg",
-                      value: property.location,
+                      value: shop.location,
                       alt: "Location",
                     },
                     {
                       icon: "icon-property-phone.svg",
-                      value: property.phone,
+                      value: shop.phone,
                       alt: "Phone",
-                    },
-                    {
-                      icon: "icon-property-price.svg",
-                      value: property.price,
-                      alt: "Price",
                     },
                   ].map(({ icon, value, alt }, index) => (
                     <div className="property-info-item" key={index}>
@@ -265,4 +246,4 @@ const Property = () => {
   );
 };
 
-export default Property;
+export default Shop;
