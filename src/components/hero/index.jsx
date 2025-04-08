@@ -33,18 +33,17 @@ const Hero = () => {
                     >
                       <div className="word" style={{ display: "inline-block" }}>
                         {"Invest Today in".split("").map((char, idx) => (
-                          <div
+                          <span
                             key={`line1-char-${idx}`}
-                            className="char"
+                            className="wow fadeInUp"
+                            data-wow-delay={`${0.1 + idx * 0.05}s`}
                             style={{
                               display: "inline-block",
-                              opacity: 1,
-                              visibility: "inherit",
-                              transform: "translate(0px, 0px)",
+                              whiteSpace: "pre",
                             }}
                           >
                             {char === " " ? "\u00A0" : char}
-                          </div>
+                          </span>
                         ))}
                       </div>
                     </div>
@@ -59,18 +58,19 @@ const Hero = () => {
                     >
                       <div className="word" style={{ display: "inline-block" }}>
                         {"Your Dream Home".split("").map((char, idx) => (
-                          <div
+                          <span
                             key={`line2-char-${idx}`}
-                            className="char"
+                            className="wow fadeInUp"
+                            data-wow-delay={`${
+                              0.1 + idx * 0.05 + "Invest Today in".length * 0.05
+                            }s`}
                             style={{
                               display: "inline-block",
-                              opacity: 1,
-                              visibility: "inherit",
-                              transform: "translate(0px, 0px)",
+                              whiteSpace: "pre",
                             }}
                           >
                             {char === " " ? "\u00A0" : char}
-                          </div>
+                          </span>
                         ))}
                       </div>
                     </div>

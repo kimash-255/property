@@ -23,7 +23,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-6 main-menu">
               <ul className="flex space-x-6 text-sm font-medium" id="menu">
                 <li>
-                  <Link className="nav-link" to="./">
+                  <Link className="nav-link" to="/">
                     Home
                   </Link>
                 </li>
@@ -234,12 +234,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="highlighted-menu">
-                <Link
-                  className="nav-link"
-                  to="#"
-                  role="menuitem"
-                  tabIndex="-1"
-                >
+                <Link className="nav-link" to="#" role="menuitem" tabIndex="-1">
                   Book Now
                 </Link>
               </li>
