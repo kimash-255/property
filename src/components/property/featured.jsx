@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { properties } from "@/data/featureddata";
+import propertyData from "@/data/propertydata";
 
 const Featured = () => {
   return (
@@ -44,16 +44,18 @@ const Featured = () => {
                 }}
                 className="swiper"
               >
-                {properties.map((property) => (
-                  <SwiperSlide key={property.id} className="swiper-slide">
+                {propertyData.map((property) => (
+                  <SwiperSlide key={property.slug} className="swiper-slide">
                     {/* Property Item Start */}
                     <div className="property-item">
                       {/* Property Item Header Start */}
                       <div className="property-header">
                         <figure className="image-anime">
-                          <img src={property.image} alt={property.title} />
+                          <img
+                            src={property.images?.[0]}
+                            alt={property.title}
+                          />
                         </figure>
-                        <span className="property-label">{property.type}</span>
                       </div>
                       {/* Property Item Header End */}
 
@@ -63,14 +65,16 @@ const Featured = () => {
                         <p>{property.location}</p>
 
                         <div className="property-meta">
-                          {property.amenities.map((amenity, index) => (
-                            <div className="property-amenity-item" key={index}>
-                              <div className="icon-box">
-                                <img src={amenity.icon} alt={amenity.text} />
+                          {property.features
+                            ?.slice(0, 4)
+                            .map((feature, index) => (
+                              <div
+                                className="property-amenity-item"
+                                key={index}
+                              >
+                                <span>• {feature}</span>
                               </div>
-                              <span>{amenity.text}</span>
-                            </div>
-                          ))}
+                            ))}
                         </div>
                       </div>
                       {/* Property Item Body End */}
@@ -78,7 +82,10 @@ const Featured = () => {
                       {/* Property Item Footer Start */}
                       <div className="property-footer">
                         <p className="property-price">{property.price}</p>
-                        <Link to="#" className="btn-default">
+                        <Link
+                          to={`/properties/${property.slug}`}
+                          className="btn-default"
+                        >
                           View More
                         </Link>
                       </div>
